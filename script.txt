@@ -1,0 +1,1 @@
+tshark -i eth -d tcp.port==xxx,dnp3 -f "ip src 10.127.0.0" -f "ip dst 127.0.0.1" -n -T fields -e frame.number -e frame.time -e ip.src -e ip.dst -e frame.len -e _ws.col.Info -e data -E header=y -E separator=, -E quote=d -E occurrence=f > C:\Users\Documents\local_to_dst.csv 
